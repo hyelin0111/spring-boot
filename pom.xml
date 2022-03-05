@@ -6,7 +6,8 @@
 	<modules>
 		<module>spring-boot-starter</module>
 		<module>spring-boot-web</module>
-	</modules>
+        <module>spring-boot-web-undertow</module>
+    </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
