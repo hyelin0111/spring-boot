@@ -1,5 +1,7 @@
 package kvp.hyelin.springboot;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -43,7 +45,7 @@ public class HumanRunner implements ApplicationRunner {
 	}
 	*/
 
-	// 4주차 Profile 실습
+	/* 4주차 Profile 실습
 	@Autowired
 	private String hello;
 
@@ -58,4 +60,24 @@ public class HumanRunner implements ApplicationRunner {
 		System.out.println(humanProperties.getFullName());
 		System.out.println("================");
 	}
+	*/
+
+	// 5주차 Logging 실습
+	private Logger logger = LoggerFactory.getLogger(HumanRunner.class);
+
+	@Autowired
+	private String hello;
+
+	@Autowired
+	private HumanProperties humanProperties;
+
+	@Override
+	public void run(ApplicationArguments args) throws Exception {
+		logger.debug("================");
+		logger.debug(hello);
+		logger.debug(humanProperties.getName());
+		logger.debug(humanProperties.getFullName());
+		logger.debug("================");
+	}
+
 }
