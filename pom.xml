@@ -10,6 +10,7 @@
         <module>spring-boot-test</module>
         <module>spring-boot-web-mvc</module>
         <module>spring-boot-web-mvc-exceptionhandler</module>
+        <module>spring-boot-web-mvc-hateoas</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
