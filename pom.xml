@@ -11,6 +11,8 @@
         <module>spring-boot-web-mvc</module>
         <module>spring-boot-web-mvc-exceptionhandler</module>
         <module>spring-boot-web-mvc-hateoas</module>
+        <module>spring-boot-web-mvc-cors</module>
+        <module>spring-boot-web-mvc-corsclient</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
