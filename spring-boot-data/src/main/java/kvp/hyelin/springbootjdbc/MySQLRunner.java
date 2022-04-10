@@ -12,7 +12,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 @Component
-public class H2Runner implements ApplicationRunner {
+public class MySQLRunner implements ApplicationRunner {
 
 	@Autowired
 	DataSource dataSource;
@@ -24,15 +24,16 @@ public class H2Runner implements ApplicationRunner {
 	public void run(ApplicationArguments args) throws Exception {
 
 		try (Connection connection = dataSource.getConnection()) {
+			System.out.println(dataSource.getClass());
 			System.out.println(connection.getMetaData().getURL());
 			System.out.println(connection.getMetaData().getUserName());
 
-			Statement statement = connection.createStatement();
-			String sql = "CREATE TABLE USER(ID INTEGER NOT NULL, NAME VARCHAR(255), PRIMARY KEY (ID))";
-			statement.executeUpdate(sql);
+			// Statement statement = connection.createStatement();
+			// String sql = "CREATE TABLE USER(ID INTEGER NOT NULL, NAME VARCHAR(255), PRIMARY KEY (ID))";
+			// statement.executeUpdate(sql);
 		}
 
-		jdbcTemplate.execute("INSERT INTO USER VALUES(1, 'hhlin')");
+		// jdbcTemplate.execute("INSERT INTO USER VALUES(1, 'hhlin')");
 
 	}
 }
