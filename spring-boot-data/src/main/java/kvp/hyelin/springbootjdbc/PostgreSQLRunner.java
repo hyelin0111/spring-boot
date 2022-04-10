@@ -12,7 +12,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MySQLRunner implements ApplicationRunner {
+public class PostgreSQLRunner implements ApplicationRunner {
 
 	@Autowired
 	DataSource dataSource;
@@ -25,15 +25,16 @@ public class MySQLRunner implements ApplicationRunner {
 
 		try (Connection connection = dataSource.getConnection()) {
 			System.out.println(dataSource.getClass());
+			System.out.println(connection.getMetaData().getDriverName());
 			System.out.println(connection.getMetaData().getURL());
 			System.out.println(connection.getMetaData().getUserName());
 
-			// Statement statement = connection.createStatement();
-			// String sql = "CREATE TABLE USER(ID INTEGER NOT NULL, NAME VARCHAR(255), PRIMARY KEY (ID))";
-			// statement.executeUpdate(sql);
+			Statement statement = connection.createStatement();
+			String sql = "CREATE TABLE ACCOUNT(ID INTEGER NOT NULL, NAME VARCHAR(255), PRIMARY KEY (ID))";
+			statement.executeUpdate(sql);
 		}
 
-		// jdbcTemplate.execute("INSERT INTO USER VALUES(1, 'hhlin')");
+		jdbcTemplate.execute("INSERT INTO ACCOUNT VALUES(1, 'hhlin')");
 
 	}
 }
