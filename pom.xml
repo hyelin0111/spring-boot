@@ -14,6 +14,7 @@
         <module>spring-boot-web-mvc-cors</module>
         <module>spring-boot-web-mvc-corsclient</module>
         <module>spring-boot-data</module>
+        <module>spring-boot-jpa</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
