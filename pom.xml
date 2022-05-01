@@ -17,6 +17,8 @@
         <module>spring-boot-jpa</module>
         <module>spring-boot-redis</module>
         <module>spring-boot-mongo</module>
+        <module>Neo4j</module>
+        <module>spring-boot-neo4j</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
