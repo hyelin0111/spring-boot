@@ -19,6 +19,7 @@
         <module>spring-boot-mongo</module>
         <module>Neo4j</module>
         <module>spring-boot-neo4j</module>
+        <module>spring-boot-security</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
