@@ -21,6 +21,7 @@
         <module>spring-boot-security</module>
         <module>spring-boot-security-customizing</module>
         <module>spring-boot-rest</module>
+        <module>spring-boot-actuator</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
